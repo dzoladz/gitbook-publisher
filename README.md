@@ -13,3 +13,6 @@ The source branch is `master`, and the target branch is `gh-pages`. If `gh-pages
 - Update project url in [`book.json`](book.json).
 - Render gitbook and publish to branch `gh-pages` by running [`bin/publish-gh-pages.sh`](bin/publish-gh-pages.sh).
 - Happy writing.
+
+## Creating access token
+https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line#creating-a-token
