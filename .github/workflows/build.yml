@@ -1,0 +1,17 @@
+name: 'build'
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Publish Gitbook
+      uses: dzoladz/gitbook-publisher@master
+      with:
+        personal_token: ${{ secrets.PERSONAL_TOKEN }}
