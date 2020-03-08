@@ -1,5 +1,5 @@
 name: 'Gitbook Publisher'
-description: 'Use GitHub Pages as Platform for GitBook'
+description: 'Publish Gitbook to GitHub Pages'
 author: 'Derek Zoladz'
 branding:
   icon: 'book-open'
