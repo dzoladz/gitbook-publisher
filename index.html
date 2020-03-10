@@ -149,20 +149,25 @@
                                 
                                 <h1 id="gitbook-publish-action">Gitbook Publish Action</h1>
 <p><img src="https://github.com/dzoladz/gitbook-publisher/workflows/build/badge.svg" alt="Build Status"></p>
-<p>This action publishes a gitbook to github pages.</p>
+<p>This action publishes a GitBook to GitHub pages.</p>
 <p>The source branch is <code>master</code>, and the target branch is <code>gh-pages</code>. If <code>gh-pages</code> does not exist, it will be created automatically.</p>
-<h2 id="repo-must-be-public-to-generate-page">Repo must be public to generate page?</h2>
+<h2 id="caveat">Caveat</h2>
+<ul>
+<li>Repo must be public to generate the GitBook</li>
+</ul>
 <h2 id="how-to-use">How to Use</h2>
 <ul>
 <li>Copy this project to a new repo.</li>
 <li>Change <code>README.md</code> to the first page for the book.</li>
 <li>Change <code>SUMMARY.md</code> to the table of contents for the book.</li>
 <li>Update project url in <a href="book.json"><code>book.json</code></a>.</li>
-<li>Render gitbook and publish to branch <code>gh-pages</code> by running <a href="bin/publish-gh-pages.sh"><code>bin/publish-gh-pages.sh</code></a>.</li>
-<li>Happy writing.</li>
+<li>Render GitBook and publish to branch <code>gh-pages</code> by running <a href="bin/publish.sh"><code>bin/publish.sh</code></a>.</li>
+<li>After running <code>publish.sh</code> the first time, pushing changed to <code>master</code> will trigger a new build of the GitBook</li>
 </ul>
 <h2 id="creating-access-token">Creating access token</h2>
-<p><a href="https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line#creating-a-token" target="_blank">https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line#creating-a-token</a></p>
+<ul>
+<li>This action requires a <a href="https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line#creating-a-token" target="_blank">personal access token (PAT)</a>. The value of the PAT must be used to create a <a href="https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets#creating-encrypted-secrets" target="_blank">GitHub secret</a> with the key name of <code>PERSONAL_TOKEN</code>.</li>
+</ul>
 
                                 
                                 </section>
@@ -198,7 +203,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["github","expandable-chapters"],"pluginsConfig":{"github":{"url":"https://github.com/dzoladz/gitbook-publisher"},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2020-03-10T00:42:16.969Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-10T00:42:56.012Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["github","expandable-chapters"],"pluginsConfig":{"github":{"url":"https://github.com/dzoladz/gitbook-publisher"},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2020-03-10T01:23:48.430Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-10T01:24:32.204Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
